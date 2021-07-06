@@ -13,7 +13,7 @@ class PlansModel {
             response = await db.one(query);
             return response;
         } catch (error) {
-        console.log(error);
+        console.log('ERROR: ', error);
         return error
         }
     }
