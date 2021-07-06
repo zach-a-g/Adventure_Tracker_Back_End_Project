@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,34 @@
     <title>${title}</title>
     <link rel="stylesheet" href="../../public/home.css">
 </head>
+
 <body>
-    <div class="field">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input" type="email" placeholder="Email">
-          <span class="icon is-small is-left">
+    ${!!is_logged_in ? `
+    <h1>Welcome to SITE! Where would you like to go?</h1>
+    ${title}` : `
+    <p>Welcome! Please sign in to begin planning your adventure!</p>
+    <form action="/users/login" method="POST">
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
-        </p>
-      </div>
-      <div class="field">
-        <p class="control has-icons-left">
-          <input class="input" type="password" placeholder="Password">
-          <span class="icon is-small is-left">
+            </p>
+        </div>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
           </span>
-        </p>
-        <button class="button is-white" type="submit">Login</button>
-        <button class="button is-white" type="submit">Sign Up</button>
-      </div>
+            </p>
+            <button class="button is-white" type="submit">Login</button>
+    </form>
+    <button class="button is-white" type="submit"><a href="/users/signup">Sign Up</a></button>
+    </div>
+    </a>`}
+
 </body>
+
 </html>
