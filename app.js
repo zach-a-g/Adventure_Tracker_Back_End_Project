@@ -17,6 +17,13 @@ app.engine('html', es6Renderer);
 app.set('views', './views');
 app.set('view engine', 'html');
 
+// app.use(session({
+//     secret: 'get rad!',
+//     resave: false,
+//     saveUninitialized: false,
+//     is_logged_in: false
+// }));
+
 const server = http.createServer(app);
 
 server.listen(port, hostname, () => {
@@ -24,5 +31,7 @@ server.listen(port, hostname, () => {
 })
 
 const routeController = require('./routes/index');
+const usersController = require('./routes/users');
 
 app.use(`/`, routeController);
+app.use('/users', usersController);
