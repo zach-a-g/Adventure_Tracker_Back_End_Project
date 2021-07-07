@@ -2,7 +2,7 @@
 
 <section>
     <div>
-        <form>
+        <form action="/location/create" method="POST">
             <label>Location</label>
             <input type="text" placeholder="Location Name" name="location_name">
             <br>
@@ -11,6 +11,7 @@
             <br>
             <label>Location Image URL(Optional)</label>
             <input type="text" placeholder="Image URL" name="location_img">
+            <button type="submit">Submit Location</button>
             <br>
             <label>Activity</label>
             <input type="radio" id="hiking" name="activity_name">
