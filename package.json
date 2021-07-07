@@ -4,9 +4,10 @@
     "description": "Update README.",
     "main": "index.js",
     "scripts": {
-        "db:connect": "psql ",
-        "db:init": "psql -f ./sql/schema.sql ",
-        "db:seed": "psql -f ./sql/seed.sql ",
+        "db:connect": "psql postgres://wdrinwbt:R6ylE_zCr272OhibnzLXDAD8zT09-o_S@batyr.db.elephantsql.com/wdrinwbt",
+        "db:init": "psql -f ./sql/schema.sql postgres://wdrinwbt:R6ylE_zCr272OhibnzLXDAD8zT09-o_S@batyr.db.elephantsql.com/wdrinwbt",
+        "db:seed": "psql -f ./sql/seed.sql postgres://wdrinwbt:R6ylE_zCr272OhibnzLXDAD8zT09-o_S@batyr.db.elephantsql.com/wdrinwbt",
+        "db:drop": "psql -f ./sql/reset.sql postgres://wdrinwbt:R6ylE_zCr272OhibnzLXDAD8zT09-o_S@batyr.db.elephantsql.com/wdrinwbt",
         "db:reset": "npm run db:drop; npm run db:init;",
         "dev": "nodemon app.js",
         "start": "node app.js",
@@ -31,7 +32,10 @@
         "express-session": "^1.17.2",
         "helmet": "^4.6.0",
         "nodemon": "^2.0.9",
+        "pg": "^8.6.0",
         "pg-promise": "^10.10.2",
+        "sequelize": "^6.6.5",
+        "sequelize-cli": "^6.2.0",
         "slugify": "^1.5.3"
     }
 }

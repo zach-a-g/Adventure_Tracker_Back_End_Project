@@ -15,8 +15,9 @@ class Users {
     }
 
     static async addUser(first_name, last_name, email, password) {
+        console.log("ID?", this.id)
         try {
-            const query = `INSERT INTO users (first_name, last_name, email, password) VALUES ('${first_name}, '${last_name}', '${email}', '${password}') RETURNING id;`;
+            const query = `INSERT INTO users (first_name, last_name, email, password) VALUES ('${first_name}', '${last_name}', '${email}', '${password}') RETURNING id;`;
             const response = await db.one(query);
             return response;
         } catch (error) {
