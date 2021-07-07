@@ -4,10 +4,10 @@ const express = require('express');
 const router = express.Router();
 const PlansModel = require('../models/plansModel');
 
-router.get('/', async (req, res) => {
+router.get('/', async(req, res) => {
     res.render('template', {
         locals: {
-            title: 'Placeholder text',
+            title: 'Adventure Tracker | Home',
             is_logged_in: req.session.is_logged_in
         },
         partials: {
