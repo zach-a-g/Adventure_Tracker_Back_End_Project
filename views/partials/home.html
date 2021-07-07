@@ -15,7 +15,9 @@
 
     ${!!is_logged_in ? `
     <h1>Welcome to SITE! Where would you like to go?</h1>
-    ${title}` : `
+    ${title}
+    <!-- ${plans.map(plans =>
+        `<li>${plans.day}</li>`)}` : ` -->
     <p>Welcome! Please sign in to begin planning your adventure!</p>
     <form action="/users/login" method="POST">
         <div class="container py-5">

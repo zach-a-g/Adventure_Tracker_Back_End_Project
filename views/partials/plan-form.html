@@ -2,7 +2,23 @@
 
 <section>
     <div>
-        <form action="/location/create" method="POST">
+        <form action="/location/add" method="POST">
+            <label>Day of the Week</label>
+            <br>
+            <input type="radio" id="Monday" name="day">
+            <label for="Monday">Monday</label>
+            <input type="radio" id="Tuesday" name="day">
+            <label for="Tuesday">Tuesday</label>
+            <input type="radio" id="Wednesday" name="day">
+            <label for="Wednesday">Wed</label>
+            <input type="radio" id="Thursday" name="day">
+            <label for="Thursday">Thurs</label>
+            <input type="radio" id="Friday" name="day">
+            <label for="Friday">Fri</label>
+            <input type="radio" id="Saturday" name="day">
+            <label for="Saturday">sat</label>
+            <input type="radio" id="Sunday" name="day">
+            <label for="Sunday">Sun</label>
             <label>Location</label>
             <input type="text" placeholder="Location Name" name="location_name">
             <br>
@@ -11,15 +27,20 @@
             <br>
             <label>Location Image URL(Optional)</label>
             <input type="text" placeholder="Image URL" name="location_img">
-            <button type="submit">Submit Location</button>
             <br>
+            <button type="submit">Submit</button>
+            </form>
+            <form action="/activity/add" method="POST">
             <label>Activity</label>
-            <input type="radio" id="hiking" name="activity_name">
+            <input type="radio" id="hiking" value="hiking" name="activity_name">
             <label for="hiking">Hiking</label>
-            <input type="radio" id="swimming" name="activity_name">
+            <input type="radio" id="swimming" value="swimming" name="activity_name">
             <label for="swimming">Swimming</label>
-            <input type="radio" id="surfing" name="activity_name">
+            <input type="radio" id="surfing" value="surfing" name="activity_name">
             <label for="surfing">Surfing</label>
+            <label>Activity Img</label>
+            <input type="text" name="activity_img">
+            <button type="submit">Submit</button>
         </form>
     </div>
 </section>
