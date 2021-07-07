@@ -35,8 +35,10 @@ const rootController = require('./routes/index');
 const usersController = require('./routes/users');
 const plansController = require('./routes/plans');
 const locationController = require('./routes/location');
+const activityController = require('./routes/activity');
 
 app.use(`/`, rootController);
 app.use('/users', usersController);
 app.use('/', plansController);
 app.use('/location', locationController);
+app.use('/activity', activityController);

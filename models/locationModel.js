@@ -21,7 +21,8 @@ class LocationModel {
 
     async addLocation() {
         try {
-            const query = `INSERT INTO location (location_name, location_img, location_description) VALUES ('${this.location_name}', '${this.location_img}', '${this.location_description}')`
+            const query = `INSERT INTO location (location_name, location_img, location_description) VALUES ('${this.location_name}', '${this.location_img}', '${this.location_description}') 
+            RETURNING id;`
             const response = await db.one(query);
             return response;
         } catch (error) {
@@ -30,3 +31,5 @@ class LocationModel {
         }
     }
 }
+
+module.exports = LocationModel;
