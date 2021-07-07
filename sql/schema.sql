@@ -6,10 +6,23 @@ CREATE TABLE users (
     password varchar(2000)
 );
 
+CREATE TABLE location (
+    id serial PRIMARY KEY,
+    location_name text NOT NULL,
+    location_img text,
+    location_description varchar(250)
+);
+
+CREATE TABLE activity (
+    id serial PRIMARY KEY,
+    activity_name text NOT NULL,
+    activity_img text
+);
+
 CREATE TABLE plans (
     id serial PRIMARY KEY,
-    content text NOT NULL,
+    day text NOT NULL,
     user_id integer REFERENCES users(id),
-     varchar(2000),
-     varchar(2000)
+    location_id integer REFERENCES users(id),
+    activity_id integer REFERENCES users(id)
 );
