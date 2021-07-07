@@ -21,7 +21,7 @@ CREATE TABLE activity (
 
 CREATE TABLE plans (
     id serial PRIMARY KEY,
-    day text NOT NULL,
+    day date NOT NULL,
     user_id integer REFERENCES users(id),
     location_id integer REFERENCES users(id),
     activity_id integer REFERENCES users(id)
