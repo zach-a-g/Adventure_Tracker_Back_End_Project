@@ -1,8 +1,16 @@
+
+
+
 body { 
     background: url(./adam-kool-ndN00KmbJ1c-unsplash.jpeg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+
   }
+
+#logo {
+    font-family: Indie Flower;
+    font-weight: bolder;
+}
