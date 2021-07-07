@@ -1,7 +1,8 @@
- .login {
-     display: grid;
-     grid-column-start: 3;
-     grid-column-end: col4-start;
-     grid-row-start: row1-start;
-     grid-row-end: third-line;
- }
+body { 
+    background: url(./adam-kool-ndN00KmbJ1c-unsplash.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+  }
