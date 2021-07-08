@@ -38,7 +38,7 @@ router.post('/signup', async(req, res) => {
 
     const response = await usersModel.addUser(first_name, last_name, email, hash);
     console.log("POST RESPONSE IS: ", response);
-    console.log(req.body);
+    // console.log(req.body);
     if (response.id) {
         res.redirect('/');
     } else {
