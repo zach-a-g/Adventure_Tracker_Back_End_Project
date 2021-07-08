@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const PlansModel = require('../models/plansModel');
+const ItineraryModel = require('../models/itineraryModel');
 
 router.get('/', async(req, res) => {
     res.render('template', {
