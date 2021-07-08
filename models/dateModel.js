@@ -23,7 +23,7 @@ class DateModel {
 
     async addDate() {
         try {
-            const query = `INSERT INTO date (itinerary_id, date, location, event, detail) VALUES ('${this.itinerary_id}', '${this.day}', '${this.location}', '${this.event}', '${this.detail}') RETURNING id;`;
+            const query = `INSERT INTO date (itinerary_id, day, location, event, detail) VALUES ('${this.itinerary_id}', '${this.day}', '${this.location}', '${this.event}', '${this.detail}') RETURNING id;`;
             const response = await db.one(query);
             return response;
 
@@ -43,3 +43,5 @@ class DateModel {
         }
     }
 }
+
+module.exports = DateModel;

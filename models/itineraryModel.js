@@ -29,4 +29,6 @@ class ItineraryModel {
         }
     }
     
-}
+};
+
+module.exports = ItineraryModel;
