@@ -1,24 +1,88 @@
-<br> ${!!is_logged_in ? `
-<h1>Welcome to SITE! Where would you like to go?</h1>
-${title}` : `
-<p>Welcome! Please sign in to begin planning your adventure!</p>
-<form action="/users/login" method="POST">
-    <div class="container py-5">
-        <div class="row container p-2">
-            <div class="col-4 mx-auto">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" name="email" class="form-control" placeholder="name@example.com">
+
+<div id="bigContainer">
+    <br> ${!!is_logged_in ? `
+    <h1>Welcome to SITE! Where would you like to go?</h1>
+
+    <section>
+        <div>
+            <form action="/location/create" method="POST">
+                <label>Location</label>
+                <input type="text" placeholder="Location Name" name="location_name">
+                <br>
+                <label>Location Description(Optional)</label>
+                <textarea placeholder="Location Description" name="location_description"></textarea>
+                <br>
+                <label>Location Image URL(Optional)</label>
+                <input type="text" placeholder="Image URL" name="location_img">
+                <button type="submit">Submit Location</button>
+                <br>
+                <label>Activity</label>
+                <input type="radio" id="hiking" name="activity_name">
+                <label for="hiking">Hiking</label>
+                <input type="radio" id="swimming" name="activity_name">
+                <label for="swimming">Swimming</label>
+                <input type="radio" id="surfing" name="activity_name">
+                <label for="surfing">Surfing</label>
+            </form>
+        </div>
+    </section>
+
+    ${title}` : `
+    <div id="homeHeading">
+        <center>
+            <h1>Welcome! Please sign in to begin planning your adventure!</h1>
+        </center>
+    </div>
+    <form action="/users/login" method="POST">
+        <div class="container py-5">
+            <div class="row container p-2">
+                <div class="col-4 mx-auto">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" placeholder="name@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 mx-auto">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4 mx-auto">
+                    <button class="button is-primary" type="submit">Sign-In</button>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4 mx-auto">
-                <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Password">
+    </form>`}
+    </div>
+    <div class="container-sm" style="max-width: 450px; max-height: 350px;">
+        <div class="card text-center">
+            <div class="card-header">
+            Log In
             </div>
-        </div>
-        <div class="row p-2">
-            <div class="col-4 mx-auto">
-                <button class="button is-primary" type="submit">Sign-In</button>
+            <div class="card-body">
+                <div class="container py-5">
+                    <div class="row container p-2">
+                        <div class=" mx-auto">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" name="email" class="form-control" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mx-auto">
+                            <label for="exampleFormControlInput1" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <div class="col-4 mx-auto">
+                            <button class="button is-primary" type="submit">Sign-In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+            Plan like no other!
             </div>
         </div>
     </div>
