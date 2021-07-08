@@ -10,7 +10,7 @@ class ItineraryModel {
     static async getItinerary(user_id) {
         try {
             const query = `SELECT * FROM itinerary INNER JOIN date ON itinerary_id = itinerary.id WHERE user_id = ${user_id}`
-            response = await db.any(query);
+            const response = await db.any(query);
             return response;
         } catch (error) {
         console.log('ERROR: ', error);

@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const ItineraryModel = require('../models/itineraryModel');
+const DateModel = require('../models/dateModel');
 
 router.get('/itinerary-form', async(req, res) => {
     const user_id = req.session.user_id;
@@ -20,10 +21,13 @@ router.get('/itinerary-form', async(req, res) => {
 
 router.get('/info', async(req, res) => {
     const user_id = req.session.user_id;
+    const theItinerary = await ItineraryModel.getItinerary(user_id);
+    console.log('THE ITINERARY: ', theItinerary);
     res.render('template', {
         locals: {
             title: 'Create your Itinerary!',
             user_id,
+            data: theItinerary,
             is_logged_in: req.session.is_logged_in
         },
         partials: {
