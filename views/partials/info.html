@@ -1,6 +1,6 @@
 <h1>${title}</h1>
-${data.map(itinerary =>
-`<div class="container" style="display: flex; justify-content: center; align-items: center; background-color: grey; height: 150px;">
+${data.map(itinerary => `
+<div class="container" style="display: flex; justify-content: center; align-items: center; background-color: grey; height: 150px;">
     <div class="row row-cols-auto" style="display: flex; flex-direction: column;">
         <div class="col">${itinerary.title}</div>
         <div class="col">${itinerary.day}</div>
@@ -8,4 +8,3 @@ ${data.map(itinerary =>
         <div class="col">${itinerary.event}</div>
     </div>
 </div>`)}
-}
