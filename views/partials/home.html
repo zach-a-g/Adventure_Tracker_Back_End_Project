@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< Updated upstream
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +22,36 @@
     <h1>Welcome to SITE! Where would you like to go?</h1>
     ${title}` : `
     <p>Welcome! Please sign in to begin planning your adventure!</p>
+=======
+    <section>
+        <div class="container">
+
+            <form action="/location/create" method="POST">
+                <label>Location</label>
+                <input type="text" placeholder="Location Name" name="location_name">
+                <br>
+                <label>Location Description(Optional)</label>
+                <textarea placeholder="Location Description" name="location_description"></textarea>
+                <br>
+                <label>Location Image URL(Optional)</label>
+                <input type="text" placeholder="Image URL" name="location_img">
+                <button type="submit">Submit Location</button>
+                <br>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Choose an Activity</option>
+                    <option value="1" id="hiking" name="activity_name">Hiking</option>
+                    <option value="2" id="swimming" name="activity_name">Swimming</option>
+                    <option value="3" id="surfing" name="activity_name">Surfing</option>
+                  </select>
+            </form>
+        </div>
+    </section>` : `
+    <div id="homeHeading">
+        <center>
+            <h1>Welcome! Please sign in to begin planning your adventure!</h1>
+        </center>
+    </div>
+>>>>>>> Stashed changes
     <form action="/users/login" method="POST">
         <div class="container py-5">
             <div class="row container p-2">
