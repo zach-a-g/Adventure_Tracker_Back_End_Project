@@ -10,7 +10,7 @@ router.post('/add', async(req, res) => {
     const newDate = new DateModel(null, user_id, day, location, event, detail);
     const response = await newDate.addDate();
     console.log('CREATE RESPONSE IS: ', response);
-    res.redirect('/');
+    res.redirect('/info');
 
 })
 
