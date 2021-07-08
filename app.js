@@ -33,10 +33,10 @@ server.listen(port, hostname, () => {
 
 const rootController = require('./routes/index');
 const usersController = require('./routes/users');
-const plansController = require('./routes/plans');
-const locationController = require('./routes/location');
+const itineraryController = require('./routes/itinerary');
+const dateController = require('./routes/date');
 
 app.use(`/`, rootController);
 app.use('/users', usersController);
-app.use('/', plansController);
-app.use('/location', locationController);
+app.use('/', itineraryController);
+app.use('/date', dateController);
