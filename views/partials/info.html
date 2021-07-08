@@ -1,24 +1,7 @@
-${body}
-<div class="columns">
-    <div class="column">
-        ${monday}
-    </div>
-    <div class="column">
-        ${tuesday}
-    </div>
-    <div class="column">
-        ${wednesday}
-    </div>
-    <div class="column">
-        ${thursday}
-    </div>
-    <div class="column">
-        ${friday}
-    </div>
-    <div class="column">
-        ${saturday}
-    </div>
-    <div class="column">
-        ${sunday}
-    </div>
-</div>
+<h1>${title}</h1>
+<form action="/add" method="POST">
+    <label>Title for your Itinerary</label>
+    <input type="text" name="title">
+    <input type="hidden" value='${user_id}' , name="user_id">
+    <button type="submit">Create Itinerary</button>
+</form>

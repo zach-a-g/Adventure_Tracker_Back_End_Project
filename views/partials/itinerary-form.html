@@ -2,8 +2,8 @@
 
 <section>
     <div>
-        <form action="/location/create" method="POST">
-            <input type="hidden" value="1">6
+        <form action="/date/add" method="POST">
+            <input type="hidden" name="user_id" value="${user_id}">
             <label>When will the event be?</label>>
             <input type="date" name="day">
             <label>Where will it be held?</label>
@@ -12,6 +12,7 @@
             <input type="text" name="event">
             <label>Other details</label>
             <textarea name="detail"></textarea>
+            <button type="submit"></button>
         </form>
     </div>
 </section>
