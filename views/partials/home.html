@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +28,17 @@
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control" placeholder="name@example.com">
                 </div>
+=======
+<br> ${!!is_logged_in ? `
+<h1>Welcome to SITE! Where would you like to go?</h1>
+${title}` : `
+<p>Welcome! Please sign in to begin planning your adventure!</p>
+<form action="/users/login" method="POST">
+    <div class="container-sm" style="max-width: 450px; max-height: 350px;">
+        <div class="card text-center">
+            <div class="card-header">
+            Log In
+>>>>>>> Stashed changes
             </div>
             <div class="row">
                 <div class="col-4 mx-auto">
