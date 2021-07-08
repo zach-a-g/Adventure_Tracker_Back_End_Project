@@ -1,3 +1,5 @@
+--Create 3 tables: User, Itinerary, and Date
+--
 CREATE TABLE users (
     id serial PRIMARY KEY,
     first_name text,
@@ -6,23 +8,17 @@ CREATE TABLE users (
     password varchar(2000)
 );
 
-CREATE TABLE location (
+CREATE TABLE itinerary (
     id serial PRIMARY KEY,
-    location_name text NOT NULL,
-    location_img text,
-    location_description varchar(250)
+    title text NOT NULL,
+    user_id int REFERENCES users(id)
 );
 
-CREATE TABLE activity (
+CREATE TABLE date (
     id serial PRIMARY KEY,
-    activity_name text NOT NULL,
-    activity_img text
-);
-
-CREATE TABLE plans (
-    id serial PRIMARY KEY,
-    day text NOT NULL,
-    user_id integer REFERENCES users(id),
-    location_id integer REFERENCES users(id),
-    activity_id integer REFERENCES users(id)
+    itinerary_id int REFERENCES itinerary(id),
+    day date NOT NULL,
+    location text NOT NULL,
+    event text NOT NULL,
+    detail text
 );

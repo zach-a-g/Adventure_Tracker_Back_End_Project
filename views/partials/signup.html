@@ -1,31 +1,57 @@
+<link rel="stylesheet" href="/styles.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
 <h1>Adventure Tracker | Sign-Up</h1>
 
-<form action="/users/signup " method="POST">
-    <div class="feild">
-        <div class="control">
-            <label class="label">
-                First Name
-                <input class="input" type="first_name" name="first_name" placeholder="Enter First Name" />
-            </label>
+
+<div class="container-sm" style="max-width: 450px; max-height: 350px;">
+    <div class="card text-center" style="background-color: rgba(255, 255, 255, 0.493);">
+        <div class="card-header" style="color: black;">
+            Log In
         </div>
-        <div class="control">
-            <label>
-                Last Name
-                <input class="input" type="last_name" name="last_name" placeholder="Enter Last Name" />
-            </label>
+        <div class="card-body">
+            <div class="container py-5">
+                <center>
+                    <form action="/users/signup " method="POST">
+                        <div class="row">
+                            <div class=" mx-auto">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">First Name</label>
+                                <input class="input" type="first_name" name="first_name" placeholder="Enter First Name" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mx-auto">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Last Name</label>
+                                <input class="input" type="last_name" name="last_name" placeholder="Enter Last Name" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" mx-auto">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Email</label>
+                                <input class="input" type="email" name="email" placeholder="Enter Email" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mx-auto">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Password</label>
+                                <input class="input" type="password" name="password" placeholder="Enter Password" />
+                            </div>
+                        </div>
+                        <div class=" row p-2 ">
+                            <div class="mx-auto ">
+                                <button class="button is-primary " type="submit " id="signInButton">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </center>
+            </div>
         </div>
-        <div class="control">
-            <label class="label">
-                Email
-                <input class="input" type="email" name="email" placeholder="Enter Email" />
-            </label>
-        </div>
-        <div class="control">
-            <label class="label">
-                Password
-                <input class="input" type="password" name="password" placeholder="Enter Password" />
-            </label>
+        <div class="card-footer " style="color: black; ">
+            Plan like no other!
         </div>
     </div>
-    <button class="button is-primary" type="submit">Register</button>
-</form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

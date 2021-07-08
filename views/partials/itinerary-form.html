@@ -1,0 +1,8 @@
+<h1>${title}</h1>
+
+<form action="/add" method="POST">
+    <label>Title for your Itinerary</label>
+    <input type="text" name="title">
+    <input type="hidden" value='${user_id}' , name="user_id">
+    <button type="submit">Create Itinerary</button>
+</form>
