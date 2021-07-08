@@ -1,7 +1,16 @@
 <h1>${title}</h1>
+${!!is_logged_in ? `
+    ${data.map(itinerary => 
+        `<li>${itinerary.title}</li>
+        <li>${itinerary.day}</li>
+        <li>${itinerary.location}</li>
+        <li>${itinerary.event}</li>`)} `
+    : `
+
 <form action="/add" method="POST">
     <label>Title for your Itinerary</label>
     <input type="text" name="title">
     <input type="hidden" value='${user_id}' , name="user_id">
     <button type="submit">Create Itinerary</button>
-</form>
+</form> `
+}
