@@ -1,16 +1,11 @@
 <h1>${title}</h1>
-${!!is_logged_in ? `
-    ${data.map(itinerary => 
-        `<li>${itinerary.title}</li>
-        <li>${itinerary.day}</li>
-        <li>${itinerary.location}</li>
-        <li>${itinerary.event}</li>`)} `
-    : `
-
-<form action="/add" method="POST">
-    <label>Title for your Itinerary</label>
-    <input type="text" name="title">
-    <input type="hidden" value='${user_id}' , name="user_id">
-    <button type="submit">Create Itinerary</button>
-</form> `
+${data.map(itinerary =>
+`<div class="container" style="display: flex; justify-content: center; align-items: center; background-color: grey; height: 150px;">
+    <div class="row row-cols-auto" style="display: flex; flex-direction: column;">
+        <div class="col">${itinerary.title}</div>
+        <div class="col">${itinerary.day}</div>
+        <div class="col">${itinerary.location}</div>
+        <div class="col">${itinerary.event}</div>
+    </div>
+</div>`)}
 }
