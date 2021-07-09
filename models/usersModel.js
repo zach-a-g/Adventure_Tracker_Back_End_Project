@@ -1,5 +1,8 @@
 const db = require('./conn');
 const bcrypt = require('bcryptjs');
+const fetch = require('node-fetch')
+const DateModel = require('./dateModel');
+const { response } = require('express');
 
 class Users {
     constructor(id, first_name, last_name, email, password) {
@@ -41,6 +44,20 @@ class Users {
             console.log('ERROR: ',error);
             return error;
         }
+    }
+
+    async getWeather() {
+        try{
+        const location = DateModel.location
+        
+        fetch(`api.openweathermap.org/data/2.5/weather?q=${location}&appid=a7e603ff18dff3f235eeab5d790b807d`)
+        .then(response => response.json())
+        .then(console.log(data))
+        } catch (error) {
+            console.log('ERROR: ',error)
+            return error
+        }
+        return response.json
     }
 }
 

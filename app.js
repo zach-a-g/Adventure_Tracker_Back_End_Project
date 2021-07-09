@@ -35,8 +35,10 @@ const rootController = require('./routes/index');
 const usersController = require('./routes/users');
 const itineraryController = require('./routes/itinerary');
 const dateController = require('./routes/date');
+const weatherController = require('./routes/weather');
 
 app.use(`/`, rootController);
 app.use('/users', usersController);
 app.use('/', itineraryController);
 app.use('/date', dateController);
+app.use('./weather', weatherController)
