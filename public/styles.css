@@ -58,6 +58,11 @@ label {
 }
 
 
+#submitButton {
+    display: flex;
+    width: 50%;
+
+
 #columns1 {
     width: 90%;
     max-width: 500px;
@@ -88,7 +93,8 @@ div#columns1 figure {
 
 .co {
     padding: 0;
-=======
+}
+  
 #buttonContainer {
     width: 60%;
     display: flex;
