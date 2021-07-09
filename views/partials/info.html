@@ -1,7 +1,18 @@
 <h1>${title}</h1>
-${data.map(itinerary => `
-<div class="container" style="display: flex; justify-content: center; align-items: center; background-color: grey; height: 150px;">
-    <div class="row row-cols-auto" style="display: flex; flex-direction: column;">
+
+<div class="container">
+    <div class="row row-cols-auto" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+        <div class="col">Date</div>
+        <div class="col">Name</div>
+        <div class="col">Location</div>
+        <div class="col">Activity</div>
+        <div class="col">Details</div>
+    </div>
+</div>
+
+${data.map(itinerary =>
+`<div class="container" style="display: flex; justify-content: center; align-items: center; background-color: grey; height: 150px;">
+    <div class="row row-cols-auto" style="display: flex; flex-direction: row;">
         <div class="col">${itinerary.title}</div>
         <div class="col">${itinerary.day}</div>
         <div class="col">${itinerary.location}</div>
@@ -14,3 +25,4 @@ ${data.map(itinerary => `
         <button id="addTripButton" type="button">Add Trip!</button>
     </a>
 </div>
+
