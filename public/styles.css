@@ -57,6 +57,7 @@ label {
     align-content: center;
 }
 
+
 #columns1 {
     width: 90%;
     max-width: 500px;
@@ -87,4 +88,24 @@ div#columns1 figure {
 
 .co {
     padding: 0;
+=======
+#buttonContainer {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#addTripButton {
+    display: flex;
+    width: 100%;
+    border: none;
+    background-color: lightskyblue;
+    color: black;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-style: none;
 }
