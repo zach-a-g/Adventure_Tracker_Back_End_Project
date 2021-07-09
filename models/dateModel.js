@@ -42,6 +42,18 @@ class DateModel {
             return error;
         }
     }
+
+    static async getSingleDate(date_id) {
+        try {
+            const query = `SELECT * FROM date WHERE id = ${date_id};`;
+            const response = await db.one(query);
+            console.log('SINGLE DATE RESPONSE IS: ', response)
+            return response;
+        } catch (error) {
+            console.log('ERROR: ', error);
+            return error;
+        }
+    }
 }
 
 module.exports = DateModel;
