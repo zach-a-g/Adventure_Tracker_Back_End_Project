@@ -13,7 +13,7 @@ class DateModel {
     static async getDatesById(itinerary_id) {
         try {
             const query = `SELECT * FROM date WHERE itinerary_id = ${itinerary_id};`;
-            const response = db.any(query);
+            const response = await db.any(query);
             return response;
         } catch (error) {
             console.log('ERROR: ', error);
