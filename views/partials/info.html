@@ -1,3 +1,4 @@
+${!!is_logged_in ? `
 <center>
     <h1>Check Out Your Travel Plans!</h1>
 </center>
@@ -16,3 +17,6 @@ ${data.map(itinerary => `
         </div>
     </div>
 </center>`).join('')}
+` : `
+<h1>Please log in to view your itinerary<h1>
+`}
