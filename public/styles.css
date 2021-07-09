@@ -56,3 +56,15 @@ label {
     align-items: center;
     align-content: center;
 }
+
+#submitButton {
+    display: flex;
+    width: 50%;
+    border: none;
+    background-color: lightskyblue;
+    color: black;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
