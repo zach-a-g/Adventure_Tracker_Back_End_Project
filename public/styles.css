@@ -57,11 +57,10 @@ label {
     align-content: center;
 }
 
-
 #submitButton {
     display: flex;
     width: 50%;
-
+}
 
 #columns1 {
     width: 90%;
@@ -94,7 +93,7 @@ div#columns1 figure {
 .co {
     padding: 0;
 }
-  
+
 #buttonContainer {
     width: 60%;
     display: flex;

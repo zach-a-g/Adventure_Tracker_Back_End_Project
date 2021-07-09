@@ -1,31 +1,31 @@
 <h1>${title}</h1>
 
-<form action="/date/add" method="POST"></form>
-<div class="container-sm" style="max-width: 450px; max-height: 350px;">
-    <div class="card text-center" style="background-color: rgba(255, 255, 255, 0.493);">
-        <div class="card-header" style="color: black;">
-            Please fill out form below
-        </div>
-        <div class="card-body">
-            <div class="container py-5">
-                <center>
-                    <div class="row">
-                        <div class=" mx-auto">
-                            <input type="hidden" name="user_id" value="${user_id}">
-                            <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">When will the event be?</label>
-                            <input type="date" name="day" class="form-control">
+<form action="/date/add" method="POST">
+    <div class="container-sm" style="max-width: 450px; max-height: 350px;">
+        <div class="card text-center" style="background-color: rgba(255, 255, 255, 0.493);">
+            <div class="card-header" style="color: black;">
+                Please fill out form below
+            </div>
+            <div class="card-body">
+                <div class="container py-5">
+                    <center>
+                        <div class="row">
+                            <div class=" mx-auto">
+                                <input type="hidden" name="user_id" value="${user_id}">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">When will the event be?</label>
+                                <input type="date" name="day" class="form-control">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="mx-auto">
-                            <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Where will it be held?</label>
-                            <input type="text" name="location" class="form-control">
+                        <div class="row">
+                            <div class="mx-auto">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Where will it be held?</label>
+                                <input type="text" name="location" class="form-control">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="mx-auto">
-                            <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">What will you be doing?</label>
-                            <select class="form-select form-select-sm" aria-label=".form-select-sm">    
+                        <div class="row">
+                            <div class="mx-auto">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">What will you be doing?</label>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm">    
                                 <option selected>------Select From List------</option>
                                 <option name="event" value="camping">Camping</option>
                                 <option name="event" value="hiking">Hiking</option>
@@ -33,25 +33,25 @@
                                 <option name="event" value="surfing">Surfing</option>
                                 <option name="event" value="sightseeing">Sightseeing</option>
                             </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="mx-auto">
-                            <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Other details</label>
-                            <textarea name="detail" class="form-control"></textarea>
+                        <div class="row">
+                            <div class="mx-auto">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Other details</label>
+                                <textarea name="detail" class="form-control"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row p-2">
-                        <div class="mx-auto ">
-                            <button class="button is-primary " type="submit " id="submitButton">Submit</button>
+                        <div class="row p-2">
+                            <div class="mx-auto ">
+                                <button class="button is-primary " type="submit " id="submitButton">Submit</button>
+                            </div>
                         </div>
-                    </div>
-                </center>
+                    </center>
+                </div>
+            </div>
+            <div class="card-footer " style="color: black; ">
+                Plan like no other!
             </div>
         </div>
-        <div class="card-footer " style="color: black; ">
-            Plan like no other!
-        </div>
     </div>
-</div>
 </form>
