@@ -1,8 +1,57 @@
 <div id="bigContainer">
     <br> ${!!is_logged_in ? `
-    <h1>Welcome to SITE! Where would you like to go?</h1>
+    <div id="welcomeContent">
+        <center>
+            <h1 style="margin-bottom: 0;">Welcome to Travel Specs!</h1>
 
-    <a href="/itinerary-form">Start Planning Your Trip Here!</a> ` : `
+            <hr style="color: whitesmoke; margin: 2px;">
+
+            <p style="width: 80%">Travel Specs provides you a work space where you can start planning your trips/vacations. As you follow our comprehensive forms, you'll be able to create and save itineraries to then be used on your trip. If you create a plan that serves you
+                well, share it on our site for everyone to see!</p>
+        </center>
+        <hr style="color: whitesmoke;">
+        <h1>Your Current Specs</h1>
+
+        <form action="/add" method="POST">
+            <div class="container-sm" style="max-width: 450px; max-height: 350px;">
+                <div class="card text-center" style="background-color: rgba(255, 255, 255, 0.493);">
+                    <div class="card-header" style="color: black;">
+                        Title of Trip
+                    </div>
+                    <div class="card-body">
+                        <div class="container py-5">
+                            <center>
+                                <div class="row">
+                                    <div class=" mx-auto">
+                                        <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Title for your Itinerary</label>
+                                        <input type="text" name="title" class="form-control" placeholder="Title of Trip" style="max-width: 350px; margin-bottom: 10px;">
+                                        <input type="hidden" value='${user_id}' , name="user_id">
+                                        <button class="button is-primary " type="submit " id="signInButton">Create Itinerary</button>
+                                    </div>
+                                </div>
+
+                            </center>
+                        </div>
+                    </div>
+                    <div class="card-footer " style="color: black; ">
+                        Plan like no other!
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <center>
+            <div class="row p-2">
+                <div class="mx-auto ">
+                    <a href="/itinerary-form" style="text-decoration: none;">
+                        <button class="button is-primary " type="submit " id="submitButton">Start Planning Your Trip Here!</button>
+                    </a>
+                </div>
+            </div>
+
+        </center>
+    </div>
+    ` : `
     <div id="homeHeading">
         <center>
             <h1>Welcome! Please sign in to begin planning your adventure!</h1>
