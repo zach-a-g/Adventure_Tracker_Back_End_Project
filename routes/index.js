@@ -14,6 +14,6 @@ router.get('/', async(req, res) => {
             body: 'partials/home'
         }
     })
-})
+});
 
 module.exports = router;
