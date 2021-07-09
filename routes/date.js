@@ -14,4 +14,19 @@ router.post('/add', async(req, res) => {
 
 })
 
+router.get('/:id?', async(req, res) => {
+    const singleEvent = await DateModel.getSingleDate(req.params.id);
+    res.render('template', {
+        locals: {
+            title: 'DETAILS',
+            data: singleEvent,
+            is_logged_in: req.session.is_logged_in
+        },
+        partials: {
+            body: 'partials/info'
+        }
+    })
+})
+
+
 module.exports = router;
