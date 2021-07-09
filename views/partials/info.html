@@ -1,10 +1,18 @@
-<h1>${title}</h1>
+<center>
+    <h1>Check Out Your Travel Plans!</h1>
+</center>
 ${data.map(itinerary => `
-<div class="container" style="display: flex; justify-content: center; align-items: center; background-color: grey; height: 150px;">
-    <div class="row row-cols-auto" style="display: flex; flex-direction: column;">
-        <div class="col">${itinerary.title}</div>
-        <div class="col">${itinerary.day}</div>
-        <div class="col">${itinerary.location}</div>
-        <div class="col">${itinerary.event}</div>
+<center>
+    <div class="tripContent">
+        <div id="columns1">
+            <figure id="iCards">
+                <div id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
+                    <li class="co"><strong>${itinerary.title}</strong></li>
+                    <li class="co">${itinerary.day}</li>
+                    <li class="co">${itinerary.location}</li>
+                    <li class="co">Details: ${itinerary.event}</li>
+                </div>
+            </figure>
+        </div>
     </div>
-</div>`)}
+</center>`).join('')}
