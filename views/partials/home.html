@@ -1,7 +1,16 @@
 <div id="bigContainer">
     <br> ${!!is_logged_in ? `
-    <h1>Welcome to SITE! Where would you like to go?</h1>
+    <div id="welcomeContent">
+        <center>
+            <h1 style="margin-bottom: 0;">Welcome to Travel Specs!</h1>
 
+            <hr style="color: whitesmoke; margin: 2px;">
+
+            <p style="width: 80%">Travel Specs provides you a work space where you can start planning your trips/vacations. As you follow our comprehensive forms, you'll be able to create and save itineraries to then be used on your trip. If you create a plan that serves you
+                well, share it on our site for everyone to see!</p>
+        </center>
+        <hr style="color: whitesmoke;">
+        <h1>Your Current Specs</h1>
     <center>
         <h1>Check Out Your Travel Plans!</h1>
     </center>
@@ -22,6 +31,18 @@
     </center>`).join('')}
 
     <a href="/itinerary-form">Start Planning Your Trip Here!</a> ` : `
+        <center>
+            <div class="row p-2">
+                <div class="mx-auto ">
+                    <a href="/itinerary-form" style="text-decoration: none;">
+                        <button class="button is-primary " type="submit " id="submitButton">Start Planning Your Trip Here!</button>
+                    </a>
+                </div>
+            </div>
+
+        </center>
+    </div>
+    ` : `
     <div id="homeHeading">
         <center>
             <h1>Welcome! Please sign in to begin planning your adventure!</h1>

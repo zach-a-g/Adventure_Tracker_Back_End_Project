@@ -20,6 +20,14 @@ h1 {
     color: white;
 }
 
+p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+}
+
 li {
     list-style: none;
     text-decoration: none;
@@ -31,6 +39,12 @@ li {
     justify-content: center;
     margin: 0;
     flex-wrap: wrap;
+}
+
+#welcomeContent {
+    background-color: rgba(0, 0, 0, 0.548);
+    width: 75%;
+    margin: auto;
 }
 
 label {
@@ -60,6 +74,13 @@ label {
 #submitButton {
     display: flex;
     width: 50%;
+    border: none;
+    background-color: lightskyblue;
+    color: black;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 #columns1 {
