@@ -57,6 +57,38 @@ label {
     align-content: center;
 }
 
+
+#columns1 {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    justify-content: center;
+}
+
+div#columns1 figure {
+    background: rgba(255, 255, 255, 0.774);
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    padding: 15px;
+    padding-bottom: 10px;
+    transition: opacity .4s ease-in-out;
+    column-break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.tripContent {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+
+.co {
+    padding: 0;
+=======
 #buttonContainer {
     width: 60%;
     display: flex;
