@@ -21,18 +21,14 @@ router.get('/', async(req, res) => {
     })
 });
 
-// router.get('/:id?', async(req, res) => {
-//     const singleEvent = await DateModel.getSingleDate(req.params.id);
-//     res.render('template', {
-//         locals: {
-//             title: 'DETAILS',
-//             data: singleEvent,
-//             is_logged_in: req.session.is_logged_in
-//         },
-//         partials: {
-//             body: 'partials/info'
-//         }
-//     })
-// })
+router.post('/delete', async (req, res) => {
+    const { id, day, location, event, detail } = req.body;
+
+    const user_id = req.session.user_id;
+    const dateDelete = new DateModel(id, user_id, day, location, event, detail);
+    const response = await dateDelete.deleteDate();
+    console.log('DELETE RESPONSE IS: ', response);
+    res.redirect('/');
+})
 
 module.exports = router;

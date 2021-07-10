@@ -13,8 +13,18 @@ class DateModel {
     static async getDatesById(itinerary_id) {
         try {
             const query = `SELECT * FROM date WHERE itinerary_id = ${itinerary_id};`;
-            const response = db.any(query);
+            const response = await db.any(query);
             return response;
+        } catch (error) {
+            console.log('ERROR: ', error);
+            return error;
+        }
+    }
+
+    static async getAllDates() {
+        try {
+            const query = `SELECT * FROM date;`;
+            const response = await db.any(query);
         } catch (error) {
             console.log('ERROR: ', error);
             return error;
@@ -37,6 +47,19 @@ class DateModel {
         try {
             const query = `UPDATE date SET day = '${this.day}', location ='${this.location}', event = '${this.event}', detail = '${this.detail}' WHERE itinerary_id = ${itinerary_id};`;
             const response = await db.result(query);
+        } catch (error) {
+            console.log('ERROR: ', error);
+            return error;
+        }
+    }
+
+    async deleteDate()  {
+        try {
+            const response = await db.result(
+                `DELETE FROM date WHERE id = $1;`, (this.id)
+            );
+            console.log('DELETE ENTRY RESPONSE: ', response);
+            return response;
         } catch (error) {
             console.log('ERROR: ', error);
             return error;
