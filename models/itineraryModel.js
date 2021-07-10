@@ -28,6 +28,17 @@ class ItineraryModel {
             return error;
         }
     }
+
+    static async getAllItinerariesById(user_id) {
+        try {
+            const query = `SELECT * FROM itinerary WHERE user_id = ${user_id}`;
+            const response = await db.any(query);
+            return response;
+        } catch (error) {
+            console.log('ERROR: ', error);
+            return error;
+        }
+    }
     
 };
 

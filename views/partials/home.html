@@ -19,11 +19,18 @@
         <div class="tripContent">
             <div id="columns1">
                 <figure id="iCards">
-                    <div id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
+                    <div class="row row-cols-auto" id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
                         <li class="co"><strong>${itinerary.title}</strong></li>
                         <li class="co">${itinerary.day}</li>
                         <li class="co">${itinerary.location}</li>
                         <li class="co">Details: ${itinerary.event}</li>
+                        <form action="./delete" method="POST">
+                            <input type="hidden" name="id" value="${itinerary.id}"/>
+                            <input type="hidden" name="day" value="${itinerary.day}"/>
+                            <input type="hidden" name="location" value="${itinerary.location}"/>
+                            <input type="hidden" name="detail" value="${itinerary.detail}"/>
+                            <button type="submit">Remove Entry</button>
+                        </form>
                     </div>
                 </figure>
             </div>
