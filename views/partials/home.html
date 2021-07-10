@@ -6,44 +6,51 @@
 
             <hr style="color: whitesmoke; margin: 2px;">
 
-            <p style="width: 80%">Travel Specs provides you a work space where you can start planning your trips/vacations. As you follow our comprehensive forms, you'll be able to create and save itineraries to then be used on your trip. If you create a plan that serves you
+            <p style="width: 80%">Travel Specs provides you a work space where you can start planning your
+                trips/vacations. As you follow our comprehensive forms, you'll be able to create and save itineraries to
+                then be used on your trip. If you create a plan that serves you
                 well, share it on our site for everyone to see!</p>
         </center>
         <hr style="color: whitesmoke;">
         <h1>Your Current Specs</h1>
-    <center>
-        <h1>Check Out Your Travel Plans!</h1>
-    </center>
-    ${data.map(itinerary => `
-    <center>
-        <div class="tripContent">
-            <div id="columns1">
-                <figure id="iCards">
-                    <div class="row row-cols-auto" id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
-                        <li class="co"><strong>${itinerary.title}</strong></li>
-                        <li class="co">${itinerary.day}</li>
-                        <li class="co">${itinerary.location}</li>
-                        <li class="co">Details: ${itinerary.event}</li>
-                        <form action="./delete" method="POST">
-                            <input type="hidden" name="id" value="${itinerary.id}"/>
-                            <input type="hidden" name="day" value="${itinerary.day}"/>
-                            <input type="hidden" name="location" value="${itinerary.location}"/>
-                            <input type="hidden" name="detail" value="${itinerary.detail}"/>
+        <center>
+            <h1>Check Out Your Travel Plans!</h1>
+        </center>
+        ${data.map(itinerary => `
+        <center>
+            <div class="tripContent">
+                <div id="columns1">
+                    <figure id="iCards" style="display: flex; flex-direction: row; justify-content: flex-end;">
+                        <div class="row row-cols-auto" id="itinerary1" width="200px" height="200px"
+                            style="border-radius: 50%;">
+                            <li class="co"><strong>${itinerary.title}</strong></li>
+                            <li class="co">${itinerary.day}</li>
+                            <li class="co">${itinerary.location}</li>
+                            <form action="./delete" method="POST">
+                                <input type="hidden" name="id" value="${itinerary.id}" />
+                                <input type="hidden" name="day" value="${itinerary.day}" />
+                                <input type="hidden" name="location" value="${itinerary.location}" />
+                                <input type="hidden" name="detail" value="${itinerary.detail}" />
+                            </form>
+                        </div>
+                        <div style="display: flex; flex-direction: column; justify-content: center">
+                            <a href="/info/${itinerary.id}"><i class="fa fa-book" aria-hidden="true"></a></i>
                             <button class="btn"><i class="fa fa-trash" type="submit"></i></button>
-                        </form>
-                    </div>
-                </figure>
+                        </div>
+                    </figure>
+                </div>
             </div>
-        </div>
-    </center>`).join('')}
+        </center>`).join('')}
         <center>
             <div class="row p-2">
                 <div class="mx-auto " style="display: flex; flex-direction: row; justify-content: space-evenly;">
                     <a href="/itinerary-form" style="text-decoration: none;">
-                        <button class="button is-primary " type="submit " id="submitButton" style="width: 250px;">Start Planning Your Trip Here!</button>
+                        <button class="button is-primary " type="submit " id="submitButton" style="width: 250px;">Start
+                            Planning Your Trip Here!</button>
                     </a>
                     <a href="/date-form" style="text-decoration: none;">
-                        <button class="button is-primary " type="submit " id="submitButton" style="width: 250px;">Add A New Entry!</button>
+                        <button class="button is-primary " type="submit " id="submitButton" style="width: 250px;">Add A
+                            New Entry!</button>
                     </a>
                 </div>
             </div>
@@ -67,14 +74,18 @@
                         <center>
                             <div class="row">
                                 <div class=" mx-auto">
-                                    <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Email address</label>
-                                    <input type="email" name="email" class="form-control" placeholder="name@example.com" style="max-width: 350px;">
+                                    <label for="exampleFormControlInput1" class="form-label"
+                                        style="color: black; max-width: 350px;">Email address</label>
+                                    <input type="email" name="email" class="form-control" placeholder="name@example.com"
+                                        style="max-width: 350px;">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="mx-auto">
-                                    <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">Password</label>
-                                    <input type="password" name="password" class="form-control" placeholder="Password" style="max-width: 350px;">
+                                    <label for="exampleFormControlInput1" class="form-label"
+                                        style="color: black; max-width: 350px;">Password</label>
+                                    <input type="password" name="password" class="form-control" placeholder="Password"
+                                        style="max-width: 350px;">
                                 </div>
                             </div>
                             <div class=" row p-2 ">
