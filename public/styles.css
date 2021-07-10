@@ -8,6 +8,7 @@ body {
     background-size: cover;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     justify-content: center;
     margin: auto;
 }
@@ -57,6 +58,7 @@ label {
 
 .card {
     background-color: rgba(255, 255, 255, 0.493);
+    border-radius: 8px;
 }
 
 #signInButton {
@@ -74,6 +76,7 @@ label {
 #submitButton {
     display: flex;
     width: 50%;
+    max-width: 400px;
     border: none;
     background-color: lightskyblue;
     color: black;
@@ -81,6 +84,7 @@ label {
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-bottom: 10px;
 }
 
 #columns1 {
@@ -135,4 +139,19 @@ div#columns1 figure {
     align-items: center;
     align-content: center;
     font-style: none;
+}
+
+#itinerary1 {
+    justify-content: center;
+}
+
+#welcomeContent {
+    border-radius: 8px;
+}
+
+#removeEntryButton {
+    background-color: rgb(230, 25, 25);
+    color: white;
+    border: none;
+    border-radius: 3px;
 }
