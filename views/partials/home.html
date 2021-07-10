@@ -29,7 +29,7 @@
                             <input type="hidden" name="day" value="${itinerary.day}"/>
                             <input type="hidden" name="location" value="${itinerary.location}"/>
                             <input type="hidden" name="detail" value="${itinerary.detail}"/>
-                            <button type="submit">Remove Entry</button>
+                            <button class="btn"><i class="fa fa-trash" type="submit"></i></button>
                         </form>
                     </div>
                 </figure>
@@ -38,9 +38,12 @@
     </center>`).join('')}
         <center>
             <div class="row p-2">
-                <div class="mx-auto ">
+                <div class="mx-auto " style="display: flex; flex-direction: row; justify-content: space-evenly;">
                     <a href="/itinerary-form" style="text-decoration: none;">
-                        <button class="button is-primary " type="submit " id="submitButton">Start Planning Your Trip Here!</button>
+                        <button class="button is-primary " type="submit " id="submitButton" style="width: 250px;">Start Planning Your Trip Here!</button>
+                    </a>
+                    <a href="/date-form" style="text-decoration: none;">
+                        <button class="button is-primary " type="submit " id="submitButton" style="width: 250px;">Add A New Entry!</button>
                     </a>
                 </div>
             </div>
