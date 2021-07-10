@@ -11,24 +11,22 @@
         </center>
         <hr style="color: whitesmoke;">
         <h1>Your Current Specs</h1>
-    <center>
-        <h1>Check Out Your Travel Plans!</h1>
-    </center>
-    ${data.map(itinerary => `
-    <center>
-        <div class="tripContent">
-            <div id="columns1">
-                <figure id="iCards">
-                    <div id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
-                        <li class="co"><strong>${itinerary.title}</strong></li>
-                        <li class="co">${itinerary.day}</li>
-                        <li class="co">${itinerary.location}</li>
-                        <li class="co">Details: ${itinerary.event}</li>
-                    </div>
-                </figure>
+
+        ${data.map(itinerary => `
+        <center>
+            <div class="tripContent">
+                <div id="columns1">
+                    <figure id="iCards">
+                        <div id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
+                            <li class="co"><strong>${itinerary.title}</strong></li>
+                            <li class="co">${itinerary.day}</li>
+                            <li class="co">${itinerary.location}</li>
+                            <li class="co">Details: ${itinerary.event}</li>
+                        </div>
+                    </figure>
+                </div>
             </div>
-        </div>
-    </center>`).join('')}
+        </center>`).join('')}
         <center>
             <div class="row p-2">
                 <div class="mx-auto ">
