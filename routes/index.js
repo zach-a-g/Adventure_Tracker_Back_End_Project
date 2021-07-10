@@ -10,7 +10,7 @@ router.get('/', async(req, res) => {
     const theItinerary = await ItineraryModel.getItinerary(user_id);
     res.render('template', {
         locals: {
-            title: 'Adventure Tracker | Home',
+            title: 'Travel Specs | Home',
             user_id,
             data: theItinerary,
             is_logged_in: req.session.is_logged_in
@@ -21,7 +21,7 @@ router.get('/', async(req, res) => {
     })
 });
 
-router.post('/delete', async (req, res) => {
+router.post('/delete', async(req, res) => {
     const { id, day, location, event, detail } = req.body;
 
     const user_id = req.session.user_id;
