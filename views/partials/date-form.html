@@ -1,6 +1,6 @@
 <h1>${title}</h1>
 
-<form action="/date/add" method="POST">
+<form action="/info/add" method="POST">
     <div class="container-sm" style="max-width: 450px; max-height: 350px;">
         <div class="card text-center" style="background-color: rgba(255, 255, 255, 0.493);">
             <div class="card-header" style="color: black;">
@@ -10,10 +10,19 @@
                 <div class="container py-5">
                     <center>
                         <div class="row">
+                            <div class="mx=auto">
+                                <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">What Itinerary is this for?</label>
+                                <select name="itinerary_id" class="form-select form-select-sm" aria-label=".form select-sm">
+                                    ${data.map(itinerary => `
+                                        <option value="${itinerary.id}">${itinerary.title}</option>`
+                                        )}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class=" mx-auto">
-                                <input type="hidden" name="user_id" value="${user_id}">
                                 <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">When will the event be?</label>
-                                <input type="date" name="day" class="form-control">
+                                <input type="datetime-local" name="day" class="form-control">
                             </div>
                         </div>
                         <div class="row">
@@ -25,13 +34,13 @@
                         <div class="row">
                             <div class="mx-auto">
                                 <label for="exampleFormControlInput1" class="form-label" style="color: black; max-width: 350px;">What will you be doing?</label>
-                                <select class="form-select form-select-sm" aria-label=".form-select-sm">    
+                                <select name="event" class="form-select form-select-sm" aria-label=".form-select-sm">    
                                 <option selected>------Select From List------</option>
-                                <option name="event" value="camping">Camping</option>
-                                <option name="event" value="hiking">Hiking</option>
-                                <option name="event" value="swimming">Swimming</option>
-                                <option name="event" value="surfing">Surfing</option>
-                                <option name="event" value="sightseeing">Sightseeing</option>
+                                <option value="Camping">Camping</option>
+                                <option value="Hiking">Hiking</option>
+                                <option value="Swimming">Swimming</option>
+                                <option value="Surfing">Surfing</option>
+                                <option value="Sightseeing">Sightseeing</option>
                             </select>
                             </div>
                         </div>
