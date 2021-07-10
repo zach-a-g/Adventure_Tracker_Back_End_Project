@@ -1,10 +1,26 @@
 ${!!is_logged_in ? `
-
-    <li>${data.day}</li>
-    <li>${data.location}</li>
-    <li>${data.event}</li>
-    <li>${data.detail}</li>
+<div id="welcomeContent">
+    <div style="display: flex; flex-direction: column; justify-content: center; margin: 100px; background: rgba(255, 255, 255, 0.774)">
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px; border: thin; border-style: solid;">
+            <img src="../images/day.png" style="width: 100px; height: auto;">
+            <h4>${data.day}</h4>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px; border: thin; border-style: solid;">
+            <img src="../images/location.png" style="width: 100px;">
+            <h4>${data.location}</h4>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px; border: thin; border-style: solid">
+            <img src="../images/event.png " style="width: 100px;">
+            <h4>${data.event}</h4>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px; border: thin; border-style: solid">
+            <img src="../images/details.png" style="width: 100px;">
+            <h4>${data.detail}</h4>
+        </div>
+    </div>
+</div>
 ` : `
 <h1>Please log in to view your itinerary<h1>
-    <img src="https://webstockreview.net/images/clipart-writing-journal-entry-7.png" style="width: 350px; margin-top: 100px;">
-`}
+        <img src="https://webstockreview.net/images/clipart-writing-journal-entry-7.png"
+            style="width: 350px; margin-top: 100px;">
+        `}
