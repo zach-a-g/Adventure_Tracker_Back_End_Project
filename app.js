@@ -39,4 +39,4 @@ const dateController = require('./routes/date');
 app.use(`/`, rootController);
 app.use('/users', usersController);
 app.use('/', itineraryController);
-app.use('/date', dateController);
+app.use('/info', dateController);
