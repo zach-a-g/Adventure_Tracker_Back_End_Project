@@ -4,11 +4,6 @@
     "description": "Update README.",
     "main": "index.js",
     "scripts": {
-        "db:connect": "psql postgres://wdrinwbt:R6ylE_zCr272OhibnzLXDAD8zT09-o_S@batyr.db.elephantsql.com/wdrinwbt",
-        "db:init": "psql -f ./sql/schema.sql postgres://wdrinwbt:R6ylE_zCr272OhibnzLXDAD8zT09-o_S@batyr.db.elephantsql.com/wdrinwbt",
-        "db:seed": "psql -f ./sql/seed.sql postgres://wdrinwbt:R6ylE_zCr272OhibnzLXDAD8zT09-o_S@batyr.db.elephantsql.com/wdrinwbt",
-        "db:drop": "psql -f ./sql/reset.sql postgres://wdrinwbt:R6ylE_zCr272OhibnzLXDAD8zT09-o_S@batyr.db.elephantsql.com/wdrinwbt",
-        "db:reset": "npm run db:drop; npm run db:init;",
         "dev": "nodemon app.js",
         "start": "node app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
