@@ -1,10 +1,26 @@
-${!!is_logged_in ? `
+<div id="bigContainer">
+    ${!!is_logged_in ? `
 
-    <li>${data.day}</li>
-    <li>${data.location}</li>
-    <li>${data.event}</li>
-    <li>${data.detail}</li>
-` : `
-<h1>Please log in to view your itinerary<h1>
-    <img src="https://webstockreview.net/images/clipart-writing-journal-entry-7.png" style="width: 350px; margin-top: 100px;">
-`}
+    <div class="tripContent" style="margin-top: 200px">
+        <div id="columns1">
+            <figure id="iCards" style="display: flex; flex-direction: row; justify-content: flex-end;">
+                <div class="row row-cols-auto" id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
+                    <center>
+                        <h2>Trip Details:</h2>
+                        <li class="co">${data.day}</li>
+                        <li class="co">${data.location}</li>
+                        <li class="co">${data.event}</li>
+                        <li class="co">${data.detail}</li>
+                        <a href="/" style="text-decoration: none;">
+                            <button class="button is-primary " type="submit " id="submitButton" style="margin-top: 10px;">Home Page</button>
+                        </a>
+                    </center>
+                </div>
+            </figure>
+        </div>
+    </div>
+
+    ` : `
+    <h1>Please log in to view your itinerary</h1>
+    <img src="https://webstockreview.net/images/clipart-writing-journal-entry-7.png" style="width: 350px; margin-top: 100px;"> `}
+</div>
