@@ -16,9 +16,11 @@ router.post('/add', async(req, res) => {
 
 router.get('/:id?', async(req, res) => {
     const singleEvent = await DateModel.getSingleDate(req.params.id);
+    const first_name = req.session.first_name
     res.render('template', {
         locals: {
             title: 'DETAILS',
+            first_name,
             data: singleEvent,
             is_logged_in: req.session.is_logged_in
         },

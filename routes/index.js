@@ -7,11 +7,13 @@ const DateModel = require('../models/dateModel');
 
 router.get('/', async(req, res) => {
     const user_id = req.session.user_id;
+    const first_name = req.session.first_name;
     const theItinerary = await ItineraryModel.getItinerary(user_id);
     res.render('template', {
         locals: {
             title: 'Adventure Tracker | Home',
             user_id,
+            first_name,
             data: theItinerary,
             is_logged_in: req.session.is_logged_in
         },
