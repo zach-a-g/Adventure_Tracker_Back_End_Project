@@ -16,7 +16,7 @@ router.get('/info', async(req, res) => {
             user_id,
             first_name,
             data: theItinerary,
-            is_logged_in:req.session.is_logged_in
+            is_logged_in: req.session.is_logged_in
         },
         partials: {
             body: 'partials/info'
@@ -45,11 +45,13 @@ router.get('/date-form', async(req, res) => {
 
 router.get('/itinerary-form', async(req, res) => {
     const user_id = req.session.user_id;
+    const first_name = req.session.first_name;
     const theItinerary = await ItineraryModel.getItinerary(user_id);
     console.log('THE ITINERARY: ', theItinerary);
     res.render('template', {
         locals: {
             title: 'Create your Itinerary!',
+            first_name,
             user_id,
             data: theItinerary,
             is_logged_in: req.session.is_logged_in
