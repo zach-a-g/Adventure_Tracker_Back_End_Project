@@ -8,11 +8,13 @@ const DateModel = require('../models/dateModel');
 
 router.get('/info', async(req, res) => {
     const user_id = req.session.user_id;
+    const first_name = req.session.first_name;
     const theItinerary = await ItineraryModel.getItinerary(user_id);
     res.render('template', {
         locals: {
             title: 'Check out your Itinerary!',
             user_id,
+            first_name,
             data: theItinerary,
             is_logged_in:req.session.is_logged_in
         },
@@ -25,10 +27,12 @@ router.get('/info', async(req, res) => {
 
 router.get('/date-form', async(req, res) => {
     const user_id = req.session.user_id;
+    const first_name = req.session.first_name;
     const allItineraries = await ItineraryModel.getAllItinerariesById(user_id);
     res.render('template', {
         locals: {
             title: 'Plan out your day!',
+            first_name,
             user_id,
             data: allItineraries,
             is_logged_in: req.session.is_logged_in
