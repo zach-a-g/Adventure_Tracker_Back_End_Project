@@ -20,13 +20,12 @@
             <div class="tripContent">
                 <div id="columns1">
                     <figure id="iCards" style="display: flex; flex-direction: row; justify-content: flex-end;">
-                        <div class="row row-cols-auto" id="itinerary1" width="200px" height="200px"
-                            style="border-radius: 50%;">
+                        <div class="row row-cols-auto" id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
                             <li class="co"><strong>${itinerary.title}</strong></li>
-                            <li class="co">${itinerary.day}</li>
+                            <li class="co">${itinerary.day.toDateString()}</li>
                             <li class="co">${itinerary.location}</li>
                         </div>
-                        <div style="display: flex; flex-direction: column; justify-content: flex-end">
+                        <div style="display: flex; flex-direction: row; justify-content: flex-end">
                             <form action="./delete" method="POST">
                                 <input type="hidden" name="id" value="${itinerary.id}" />
                                 <input type="hidden" name="day" value="${itinerary.day}" />

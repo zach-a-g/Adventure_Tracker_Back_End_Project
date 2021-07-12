@@ -1,26 +1,30 @@
-${!!is_logged_in ? `
-<div id="welcomeContent">
-    <div style="display: flex; flex-direction: column; justify-content: center; margin: 100px; background: rgba(255, 255, 255, 0.774)">
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px; border: thin; border-style: solid;">
-            <img src="../images/day.png" style="width: 100px; height: auto;">
-            <h4>${data.day}</h4>
-        </div>
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px; border: thin; border-style: solid;">
-            <img src="../images/location.png" style="width: 100px;">
-            <h4>${data.location}</h4>
-        </div>
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px; border: thin; border-style: solid">
-            <img src="../images/event.png " style="width: 100px;">
-            <h4>${data.event}</h4>
-        </div>
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px; border: thin; border-style: solid">
-            <img src="../images/details.png" style="width: 100px;">
-            <h4>${data.detail}</h4>
+<div id="bigContainer">
+    ${!!is_logged_in ? `
+
+    <div class="tripContent" style="margin-top: 200px">
+        <div id="columns1">
+            <figure id="iCards" style="display: flex; flex-direction: row; justify-content: flex-end;">
+                <div class="row row-cols-auto" id="itinerary1" width="200px" height="200px" style="border-radius: 50%;">
+                    <center>
+                        <h2>Trip Details:</h2>
+                        <li class="co">${data.day}</li>
+                        <li class="co">${data.location}</li>
+                        <li class="co">${data.event}</li>
+                        <li class="co">${data.detail}</li>
+                        <a href="/" style="text-decoration: none;">
+                            <button class="button is-primary " type="submit " id="submitButton"
+                                style="margin-top: 10px;">Home Page</button>
+                        </a>
+                    </center>
+                </div>
+            </figure>
         </div>
     </div>
-</div>
-` : `
-<h1>Please log in to view your itinerary<h1>
+
+    ` : `
+    <main style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1>Please log in to view your itinerary</h1>
         <img src="https://webstockreview.net/images/clipart-writing-journal-entry-7.png"
-            style="width: 350px; margin-top: 100px;">
-        `}
+            style="width: 350px; margin-top: 100px;"> `}
+    </main>
+</div>
