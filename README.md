@@ -5,9 +5,9 @@ Travel Specs is a travel planning website that allows you to create and keep tra
 
 ## Screenshots
 <hr>
-!(/public/images/loginPagePic.png)
-!(/public/images/homePagePic.png)
-!(/public/images/dateFormPic.png)
+![](public/images/loginPagePic.png)
+![](public/images/homePagePic.png)
+![](public/images/dateFormPic.png)
 
 
 ## Languages
