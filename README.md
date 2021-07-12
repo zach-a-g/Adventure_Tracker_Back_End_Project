@@ -11,12 +11,13 @@ Travel Specs is a travel planning website that allows you to create and keep tra
 ## Languages
 
 The languages used in the project consist of the following:
-    Express
-    Node
-    HTML
-    CSS
-    JavaScript
-    SQL
-
+    <ul>
+        <li>Express</li>
+        <li>Node</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>SQL</li>
+    </ul>
 
 
